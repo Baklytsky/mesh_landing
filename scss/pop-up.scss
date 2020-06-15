@@ -26,8 +26,11 @@
     padding-bottom: 17px;
   }
   .pop-up-title {
-    font-size: $card-description;
+    font-size: $normal;
     color: $black;
+    @media (min-width: 768px) {
+      font-size: $card-description;
+    }
   }
 
   .form-list {
@@ -70,9 +73,12 @@
     color: $black;
   }
   .pop-up-description {
-    font-size: $card-description;
+    font-size: $normal;
     color: $black;
     padding: 0 30px 24px;
+    @media (min-width: 768px) {
+      font-size: $card-description;
+    }
   }
   .cookies-icon {
     width: 56px;

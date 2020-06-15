@@ -21,7 +21,6 @@
   text-align: center;
   display: none;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: fixed;
   bottom: -100px;
@@ -30,15 +29,16 @@
   background: $aquamarine;
   color: $black;
   padding: 10px 15px;
-  z-index: 100;
+  z-index: 9;
   @media (min-width: 768px) {
     width: 436px;
     height: 436px;
+    justify-content: center;
   }
   .cookie-headline {
     font-size: $normal;
     font-weight: 700;
-    padding-bottom: 8px;
+    padding: 8px 0;
     @media (min-width: 768px) {
       font-size: $normal-plus;
     }
@@ -96,6 +96,7 @@
 
 #hero-section {
   width: 100%;
+  min-height: 100vh;
   background: url("../img/search-section-bg2.jpg") no-repeat center / cover;
 
   //********************************************** Headline ************************************
@@ -135,12 +136,13 @@
   }
 
   .search-block {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px 0 10px;
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       display: flex;
       flex-direction: row;
       margin: 42px 0 26px;
@@ -148,13 +150,20 @@
     //************************************* Status selector **************************************
 
     .status-selector {
-      width: 100%;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      width: 40%;
       height: 40px;
+      z-index: 1;
       @media (min-width: 576px) {
-        margin-bottom: 20px;
+        width: 171px;
+        position: relative;
+        top: 0;
+        left: 0;
       }
       @media (min-width: 768px) {
-        width: 171px;
+        position: relative;
         height: 52px;
         border: 6px solid $white;
         margin: 0;
@@ -163,7 +172,7 @@
       .dropdown, .dropholder {
         background-color: $gallery;
         border-radius: 4px;
-        @media (min-width: 768px) {
+        @media (min-width: 576px) {
           border-radius: 0;
         }
       }
@@ -182,11 +191,13 @@
 
 
         .holder {
+          font-size: $inbox-counter;
           font-weight: 700;
           line-height: 40px;
           color: $black;
           padding-right: 19px;
           @media (min-width: 768px) {
+            font-size: $normal;
             line-height: 52px;
           }
         }
@@ -195,9 +206,12 @@
           line-height: 0;
           position: absolute;
           top: 50%;
-          right: 21px;
+          right: 10px;
           transform: translateY(-50%);
           transition: transform .3s linear;
+          @media (min-width: 768px) {
+            right: 21px;
+          }
 
           &:before {
             font-weight: 700;
@@ -227,6 +241,7 @@
         top: 100%;
         right: 0;
         margin: 16px 0;
+        border-radius: 4px;
         cursor: pointer;
         display: none;
         background: $gallery;
@@ -280,12 +295,18 @@
           padding-left: 5px;
           margin: 20px 0;
           -webkit-appearance: none;
+          &::placeholder {
+            font-size: $inbox-counter;
+            @media (min-width: 576px) {
+              font-size: $lang-item;
+            }
+          }
           @media (min-width: 576px) {
             margin: 0;
+            border-radius: 0;
           }
           @media (min-width: 768px) {
             height: 64px;
-            border-radius: 0;
           }
         }
         .search-text[type="search"]::-webkit-search-decoration,
@@ -402,7 +423,7 @@
   //********************************************** Find customer block ***************************
   .find-customer {
     width: 100%;
-    background: url("../img/photo-colage.png") no-repeat center;
+    background: url("../img/photo-colage.png") no-repeat center / contain;
     .text-block {
       width: 90%;
       text-align: center;
@@ -572,9 +593,11 @@
         }
         .card-number {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
-
+          @media (min-width: 768px) {
+            justify-content: space-between;
+          }
           span {
             font-size: $normal-plus;
             font-weight: 700;
@@ -588,8 +611,11 @@
           }
         }
         .card-text {
-          text-align: left;
+          text-align: center;
           padding-top: 50px;
+          @media (min-width: 768px) {
+            text-align: left;
+          }
           .card-headline {
             font-size: $normal-plus;
             font-weight: 700;
@@ -604,7 +630,10 @@
               line-height: 44px;
             }
             span {
-              display: block;
+              display: inline-block;
+              @media (min-width: 768px) {
+                display: block;
+              }
             }
           }
           .card-description {
@@ -993,7 +1022,10 @@
 //********************************************** Footer ******************************************
 //************************************************************************************************
 #footer {
-  background: $benefits-gradient;
+  background: $newsletter-gradient;
+  @media (min-width: 768px) {
+    background: $benefits-gradient;
+  }
   .footer-menu {
     padding: 15px 0;
     @media (min-width: 768px) {
@@ -1011,18 +1043,23 @@
         font-size: $menu-link;
         font-weight: 800;
         text-transform: uppercase;
-        color: $black;
+        color: $white;
         @media (min-width: 576px) {
           font-size: $normal-plus;
+        }
+        @media (min-width: 768px) {
+          font-size: $normal-plus;
+          color: $black;
         }
       }
     }
   }
   .menu-list {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     @media (min-width: 768px) {
+      display: flex;
       flex-direction: row;
       font-size: $btn-size;
     }
@@ -1048,8 +1085,12 @@
   }
   .copyright {
     font-size: $lang-item;
-    text-align: right;
-    color: $black;
+    text-align: center;
+    color: $white;
+    @media (min-width: 768px) {
+      color: $black;
+      text-align: right;
+    }
   }
 }
 

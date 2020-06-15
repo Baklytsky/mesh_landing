@@ -81,7 +81,7 @@
 }
 
 @mixin pop-up-window {
-  width: 460px;
+  width: 300px;
   text-align: center;
   background-color: $white;
   position: relative;
@@ -92,13 +92,19 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 24px 35px;
+  @media (min-width: 768px) {
+    width: 460px;
+  }
 }
 
 @mixin pop-up-headline {
-  font-size: $normal-plus;
+  font-size: $normal;
   color: $black;
   font-weight: 700;
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: $normal-plus;
+  }
 }
 
 @mixin close-x {
