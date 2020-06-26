@@ -24,40 +24,40 @@ function headerOverflow () {
     header.classList.toggle('show-menu')
 }
 
-//------------------------------- Search block ---------------------------------------
-
-let navigationSelect = document.querySelector('.status-selector');
-
-                //------------- Status selector ---------------------------------------
-function initSelect(elem) {
-    let selectHolder = elem.querySelector('.holder'),
-        selectOptions = elem.querySelectorAll('.dropdownOption li'),
-        dropHolder = elem.querySelector('.dropdown'),
-        iconOpen = elem.querySelector('.icon-down-open-big'),
-        selectedOption = selectOptions[0];
-
-    selectedOption.classList.add('current');
-
-    dropHolder.addEventListener('click', function () {
-        dropHolder.classList.toggle('active');
-    });
-
-    iconOpen.addEventListener('click', function () {
-        dropHolder.classList.toggle('active');
-    });
-
-    selectOptions.forEach(function(currentElement) {
-        currentElement.addEventListener('click', function(){
-            selectedOption.classList.remove('current');
-            selectedOption = currentElement;
-            currentElement.classList.add('current');
-            selectHolder.textContent = currentElement.textContent;
-            dropHolder.classList.toggle('active');
-        });
-    });
-}
-
-initSelect(navigationSelect);
+// //------------------------------- Search block ---------------------------------------
+//
+// let navigationSelect = document.querySelector('.status-selector');
+//
+//                 //------------- Status selector ---------------------------------------
+// function initSelect(elem) {
+//     let selectHolder = elem.querySelector('.holder'),
+//         selectOptions = elem.querySelectorAll('.dropdownOption li'),
+//         dropHolder = elem.querySelector('.dropdown'),
+//         iconOpen = elem.querySelector('.icon-down-open-big'),
+//         selectedOption = selectOptions[0];
+//
+//     selectedOption.classList.add('current');
+//
+//     dropHolder.addEventListener('click', function () {
+//         dropHolder.classList.toggle('active');
+//     });
+//
+//     iconOpen.addEventListener('click', function () {
+//         dropHolder.classList.toggle('active');
+//     });
+//
+//     selectOptions.forEach(function(currentElement) {
+//         currentElement.addEventListener('click', function(){
+//             selectedOption.classList.remove('current');
+//             selectedOption = currentElement;
+//             currentElement.classList.add('current');
+//             selectHolder.textContent = currentElement.textContent;
+//             dropHolder.classList.toggle('active');
+//         });
+//     });
+// }
+//
+// initSelect(navigationSelect);
 
 //------------------------------- Digital sliders ---------------------------------------
 //----------------------------------- Top slider ----------------------------------------
@@ -109,6 +109,20 @@ jQuery(function ($) {
                     items: 4
                 }
             }
+        });
+        //----------------------------------- Bottom slider ----------------------------------------
+        $('.text-slider').owlCarousel({
+            lazyLoad: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            loop: true,
+            items: 1,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp',
         });
     });
 });

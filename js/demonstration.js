@@ -1,17 +1,22 @@
 'use strict'
 
+//------------- Header on Scroll --------------------------------------
+window.addEventListener('scroll', ()=> {
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky-header', window.scrollY > 750);
+})
 
-//------------- Search autocomplete -----------------------------------
-
-let searchInput = document.querySelector('.search-text'),
-    autocompleteBlock = document.querySelector('.autocomplete-list');
-
-function showAutocompleteBlock() {
-    searchInput.addEventListener('click', () => {
-        autocompleteBlock.classList.toggle('autocomplete-list-active')
-    })
-}
-showAutocompleteBlock();
+// //------------- Search autocomplete -----------------------------------
+//
+// let searchInput = document.querySelector('.search-text'),
+//     autocompleteBlock = document.querySelector('.autocomplete-list');
+//
+// function showAutocompleteBlock() {
+//     searchInput.addEventListener('click', () => {
+//         autocompleteBlock.classList.toggle('autocomplete-list-active')
+//     })
+// }
+// showAutocompleteBlock();
 
 //------------- Pop-up Sign-in -----------------------------------
 

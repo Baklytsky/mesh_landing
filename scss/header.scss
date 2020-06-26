@@ -11,7 +11,7 @@ header {
   position: absolute;
   overflow: hidden;
   transition: overflow .4s ease-in;
-  z-index: 2;
+  z-index: 8;
 
   .wrapper-header {
     display: flex;
@@ -234,3 +234,17 @@ header {
   }
 }
 
+.sticky-header {
+  position: fixed;
+  top: 0;
+  background-color: $black;
+  animation: slide-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @keyframes slide-bottom {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
