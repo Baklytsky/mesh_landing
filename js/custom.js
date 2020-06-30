@@ -1,5 +1,11 @@
 'use strict';
 
+//------------- Header on Scroll --------------------------------------
+window.addEventListener('scroll', ()=> {
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky-header', window.scrollY > 750);
+})
+
 //-------------------------- burger btn action --------------------------------------
 
 let header = document.querySelector('header'),
@@ -110,7 +116,7 @@ jQuery(function ($) {
                 }
             }
         });
-        //----------------------------------- Bottom slider ----------------------------------------
+        //----------------------------------- text slider ----------------------------------------
         $('.text-slider').owlCarousel({
             lazyLoad: true,
             nav: false,
@@ -124,5 +130,19 @@ jQuery(function ($) {
             animateOut: 'slideOutUp',
             animateIn: 'slideInUp',
         });
+        //----------------------------------- jQuery Marquee Running line -------------------------
+
+        if (parseInt($(window).width()) > 768) {
+            $('.marquee').marquee({
+                duration: 7000,
+                duplicated: true
+            });
+        }
+        if (parseInt($(window).width()) < 768) {
+            $('.marquee').marquee({
+                duration: 4000,
+                duplicated: true
+            });
+        }
     });
 });

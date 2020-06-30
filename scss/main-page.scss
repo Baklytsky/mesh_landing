@@ -421,7 +421,33 @@
 
 //********************************************** Running line Section ***************************
 //***********************************************************************************************
-
+.marquee {
+  width: 100%;
+  font-size: $card-description;
+  font-weight: 900;
+  color: $white;
+  background-color: $running-line;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  @media (min-width: 768px) {
+    font-size: $benefits-title;
+    line-height: 41px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  @media (min-width: 1200px) {
+    font-size: $h3;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  span {
+    white-space: pre-wrap;
+  }
+}
 .running-line {
   width: 100%;
   background-color: $running-line;
