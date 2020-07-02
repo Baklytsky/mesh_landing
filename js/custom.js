@@ -5,7 +5,7 @@ $("#main-nav-menu").on("click","a", function (event) {
     event.preventDefault();
     let id  = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    $('body,html').animate({scrollTop: top}, 1000);
     if (parseInt($(window).width()) < 992) {
         setTimeout(function(){
                 $(".burger-icon").toggleClass("burger-icon-active")
