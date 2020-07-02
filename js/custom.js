@@ -6,6 +6,11 @@ $("#main-nav-menu").on("click","a", function (event) {
     let id  = $(this).attr('href'),
         top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1500);
+    if (parseInt($(window).width()) < 992) {
+        $(".burger-icon").toggleClass("burger-icon-active")
+        $(".main-menu").toggleClass("mobile-menu-active")
+        $("header").toggleClass("show-menu")
+    }
 });
 //------------- Header on Scroll --------------------------------------
 window.addEventListener('scroll', ()=> {
@@ -18,10 +23,9 @@ window.addEventListener('scroll', ()=> {
 let header = document.querySelector('header'),
     burgerToggle = document.querySelector('.burger-icon'),
     mobileMenu = document.querySelector('.main-menu');
-showOrCloseMenu();
+    burgerToggle.addEventListener("click", showOrCloseMenu);
 
 function showOrCloseMenu() {
-    burgerToggle.onclick = () => {
         burgerToggle.classList.toggle('burger-icon-active');
         mobileMenu.classList.toggle('mobile-menu-active');
 
@@ -31,7 +35,6 @@ function showOrCloseMenu() {
             setTimeout(headerOverflow, 400);
         }
     };
-}
 
 function headerOverflow () {
     header.classList.toggle('show-menu')
