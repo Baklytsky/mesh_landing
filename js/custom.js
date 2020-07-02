@@ -1,5 +1,12 @@
 'use strict';
 
+// ********************************************MENU*******************************************
+$("#main-nav-menu").on("click","a", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+});
 //------------- Header on Scroll --------------------------------------
 window.addEventListener('scroll', ()=> {
     let header = document.querySelector('header');
@@ -135,13 +142,15 @@ jQuery(function ($) {
         if (parseInt($(window).width()) > 768) {
             $('.marquee').marquee({
                 duration: 7000,
-                duplicated: true
+                duplicated: true,
+                startVisible: true
             });
         }
         if (parseInt($(window).width()) < 768) {
             $('.marquee').marquee({
                 duration: 4000,
-                duplicated: true
+                duplicated: true,
+                startVisible: true
             });
         }
     });
