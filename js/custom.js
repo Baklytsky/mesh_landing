@@ -7,9 +7,12 @@ $("#main-nav-menu").on("click","a", function (event) {
         top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1500);
     if (parseInt($(window).width()) < 992) {
-        $(".burger-icon").toggleClass("burger-icon-active")
-        $(".main-menu").toggleClass("mobile-menu-active")
-        $("header").toggleClass("show-menu")
+        setTimeout(function(){
+                $(".burger-icon").toggleClass("burger-icon-active")
+                $(".main-menu").toggleClass("mobile-menu-active")
+                $("header").removeClass("show-menu")
+             },
+            400);
     }
 });
 //------------- Header on Scroll --------------------------------------
@@ -34,7 +37,7 @@ function showOrCloseMenu() {
         } else {
             setTimeout(headerOverflow, 400);
         }
-    };
+    }
 
 function headerOverflow () {
     header.classList.toggle('show-menu')

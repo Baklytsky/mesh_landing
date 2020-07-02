@@ -3,14 +3,14 @@
 
 .show-menu {
   overflow: visible;
-  transition: all .4s linear;
+  //transition: all .4s linear;
 }
 
 header {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  transition: overflow .4s ease-in;
+  //transition: overflow .4s ease-in;
   z-index: 8;
 
   .wrapper-header {
