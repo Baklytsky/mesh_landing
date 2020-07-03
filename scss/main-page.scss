@@ -58,17 +58,19 @@
     justify-content: center;
     align-items: center;
   }
-  .cookie-link, .cookie-btn {
+  .cookie-learn-more, .cookie-btn {
     margin: 5px;
     @media (min-width: 768px) {
       margin: 10px;
     }
   }
-  .cookie-link {
-    display: inline-block;
+  .cookie-learn-more {
+    font-size: $normal;
     font-weight: 600;
-    text-decoration: none;
     color: $black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     transition: all .3s linear;
     &:hover {
       text-decoration: underline;
@@ -97,7 +99,7 @@
 #hero-section {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/landing-main-img.jpg") no-repeat center / cover;
+  background: url("../img/main-bg-last.jpg") no-repeat center / cover;
   position: relative;
 
   //********************************************** Headline ************************************
@@ -424,7 +426,7 @@
 .marquee {
   width: 100%;
   font-size: $card-description;
-  font-weight: 900;
+  font-weight: 700;
   color: $white;
   background-color: $running-line;
   text-transform: uppercase;
@@ -493,7 +495,7 @@
 
   100% {
     opacity: 0;
-    transform: translateY(2000px);
+    transform: translateY(100px);
   }
 }
 
@@ -504,7 +506,7 @@
 @keyframes slideInUp {
   0% {
     opacity: 0;
-    transform: translateY(-2000px);
+    transform: translateY(-100px);
   }
 
   100% {
@@ -515,6 +517,13 @@
 
 .slideInUp {
   animation-name: slideInUp;
+}
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 #customers {
@@ -1126,74 +1135,38 @@
 //********************************************** Footer ******************************************
 //************************************************************************************************
 #footer {
+  padding: 35px 0 40px;
   background: $newsletter-gradient;
   @media (min-width: 768px) {
-    background: $benefits-gradient;
+    padding: 70px 0 89px;
   }
-  .footer-menu {
-    padding: 15px 0;
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 0;
-    }
-    .logo {
-      padding-bottom: 20px;
-      text-align: center;
-      @media (min-width: 768px) {
-        padding-bottom: 0;
-      }
-      a {
-        font-size: $menu-link;
-        font-weight: 800;
-        text-transform: uppercase;
-        color: $white;
-        @media (min-width: 576px) {
-          font-size: $normal-plus;
-        }
-        @media (min-width: 768px) {
-          font-size: $normal-plus;
-          color: $black;
-        }
-      }
-    }
+  .footer-hands {
+    font-size: $h3;
+    text-align: center;
+    display: block;
   }
-  .menu-list {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      font-size: $btn-size;
-    }
-  }
-  .footer-menu-item {
-    margin-bottom: 20px;
-     @media (min-width: 768px) {
-      padding-right: 25px;
-       margin-bottom: 0;
-    }
-  }
-  .footer-menu-item:last-child {
-    padding-right: 0;
-  }
-  .footer-menu-link {
-    font-size: $log-in;
-    font-weight: 700;
-    color: $black;
-    transition: all .3s linear;
-    &:hover {
-      color: $aquamarine;
-    }
-  }
-  .copyright {
-    font-size: $lang-item;
+  .footer-title {
+    @include headline;
+    text-transform: none;
     text-align: center;
     color: $white;
     @media (min-width: 768px) {
-      color: $black;
-      text-align: right;
+      font-size: $big-description;
+    }
+  }
+  .footer-description {
+    font-size: $normal;
+    line-height: 21px;
+    text-align: center;
+    color: $white;
+    @media (min-width: 768px) {
+      font-size: $btn-size;
+      line-height: 31px;
+    }
+    a  {
+      font-weight: 700;
+      text-decoration: underline;
+      color: $white;
     }
   }
 }

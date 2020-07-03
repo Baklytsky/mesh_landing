@@ -17,7 +17,7 @@
 
 let cookie = document.querySelector('.cookie'),
     cookieAlert = document.querySelector('.cookie-alert'),
-    learnMoreCookie = document.querySelector('.cookie-link'),
+    learnMoreCookie = document.querySelector('.cookie-learn-more'),
     acceptCookie = document.querySelector('.cookie-btn'),
     gotIt = document.querySelector('.got-it'),
     closeX = document.querySelectorAll('.close-x');

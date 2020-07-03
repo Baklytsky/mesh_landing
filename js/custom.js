@@ -135,7 +135,7 @@ jQuery(function ($) {
             nav: false,
             dots: false,
             autoplay: true,
-            autoplayTimeout: 2500,
+            autoplayTimeout: 1500,
             autoplayHoverPause: true,
             responsiveClass: true,
             loop: true,
