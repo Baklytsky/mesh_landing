@@ -863,9 +863,7 @@
 //************************************************************************************************
 #footer {
   background: $newsletter-gradient;
-  @media (min-width: 768px) {
-    background: $benefits-gradient;
-  }
+
   .footer-menu {
     padding: 15px 0;
     @media (min-width: 768px) {
@@ -875,9 +873,7 @@
     }
     .logo {
       text-align: center;
-      @media (min-width: 768px) {
-        padding-bottom: 0;
-      }
+
       a {
         font-size: $menu-link;
         font-weight: 800;
@@ -885,10 +881,6 @@
         color: $white;
         @media (min-width: 576px) {
           font-size: $normal-plus;
-        }
-        @media (min-width: 768px) {
-          font-size: $normal-plus;
-          color: $black;
         }
       }
     }
@@ -916,7 +908,7 @@
   .footer-menu-link {
     font-size: $log-in;
     font-weight: 700;
-    color: $black;
+    color: $white;
     transition: all .3s linear;
     &:hover {
       color: $aquamarine;
@@ -926,10 +918,6 @@
     font-size: $lang-item;
     text-align: center;
     color: $white;
-    @media (min-width: 768px) {
-      color: $black;
-      text-align: right;
-    }
   }
 }
 
