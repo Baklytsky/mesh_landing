@@ -1,18 +1,5 @@
 'use strict'
 
-
-// //------------- Search autocomplete -----------------------------------
-//
-// let searchInput = document.querySelector('.search-text'),
-//     autocompleteBlock = document.querySelector('.autocomplete-list');
-//
-// function showAutocompleteBlock() {
-//     searchInput.addEventListener('click', () => {
-//         autocompleteBlock.classList.toggle('autocomplete-list-active')
-//     })
-// }
-// showAutocompleteBlock();
-
 //------------- Pop-up Sign-in -----------------------------------
 
 let cookie = document.querySelector('.cookie'),

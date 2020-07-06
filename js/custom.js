@@ -15,6 +15,14 @@ $("#main-nav-menu").on("click","a", function (event) {
             400);
     }
 });
+
+// ******************************************** Footer - MENU *******************************************
+$("#footer-menu").on("click","a", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1000);
+});
 //------------- Header on Scroll --------------------------------------
 window.addEventListener('scroll', ()=> {
     let header = document.querySelector('header');
@@ -42,41 +50,6 @@ function showOrCloseMenu() {
 function headerOverflow () {
     header.classList.toggle('show-menu')
 }
-
-// //------------------------------- Search block ---------------------------------------
-//
-// let navigationSelect = document.querySelector('.status-selector');
-//
-//                 //------------- Status selector ---------------------------------------
-// function initSelect(elem) {
-//     let selectHolder = elem.querySelector('.holder'),
-//         selectOptions = elem.querySelectorAll('.dropdownOption li'),
-//         dropHolder = elem.querySelector('.dropdown'),
-//         iconOpen = elem.querySelector('.icon-down-open-big'),
-//         selectedOption = selectOptions[0];
-//
-//     selectedOption.classList.add('current');
-//
-//     dropHolder.addEventListener('click', function () {
-//         dropHolder.classList.toggle('active');
-//     });
-//
-//     iconOpen.addEventListener('click', function () {
-//         dropHolder.classList.toggle('active');
-//     });
-//
-//     selectOptions.forEach(function(currentElement) {
-//         currentElement.addEventListener('click', function(){
-//             selectedOption.classList.remove('current');
-//             selectedOption = currentElement;
-//             currentElement.classList.add('current');
-//             selectHolder.textContent = currentElement.textContent;
-//             dropHolder.classList.toggle('active');
-//         });
-//     });
-// }
-//
-// initSelect(navigationSelect);
 
 //------------------------------- Digital sliders ---------------------------------------
 //----------------------------------- Top slider ----------------------------------------
@@ -147,14 +120,14 @@ jQuery(function ($) {
 
         if (parseInt($(window).width()) > 768) {
             $('.marquee').marquee({
-                duration: 7000,
+                duration: 8000,
                 duplicated: true,
                 startVisible: true
             });
         }
         if (parseInt($(window).width()) < 768) {
             $('.marquee').marquee({
-                duration: 4000,
+                duration: 5000,
                 duplicated: true,
                 startVisible: true
             });
