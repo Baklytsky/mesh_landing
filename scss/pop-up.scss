@@ -73,12 +73,9 @@
     color: $black;
   }
   .pop-up-description {
-    font-size: $normal;
+    font-size: $lang-item;
     color: $black;
-    padding: 0 30px 24px;
-    @media (min-width: 768px) {
-      font-size: $card-description;
-    }
+    padding: 0 25px 24px;
   }
   .cookies-icon {
     width: 56px;

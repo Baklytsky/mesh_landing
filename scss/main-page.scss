@@ -23,8 +23,8 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  bottom: -100px;
-  right: -50px;
+  bottom: -90px;
+  right: -40px;
   border-radius: 50%;
   background: $aquamarine;
   color: $black;
@@ -47,6 +47,7 @@
   @media (min-width: 768px) {
     width: 380px;
     height: 380px;
+    bottom: -100px;
     padding: 45px 15px 0;
   }
   .cookie-headline {
@@ -58,10 +59,11 @@
     }
   }
   .cookie-description {
-    width: 220px;
-    font-size: $lang-item;
+    width: 230px;
+    font-size: $sign-up;
     padding-bottom: 5px;
     @media (min-width: 768px) {
+      font-size: $sign-up;
       width: 260px;
       padding-bottom: 15px;
     }
@@ -72,13 +74,13 @@
     align-items: center;
   }
   .cookie-learn-more, .cookie-btn {
+    font-size: $inbox-counter;
     margin: 5px;
     @media (min-width: 768px) {
-      margin: 10px;
+      font-size: $lang-item;
     }
   }
   .cookie-learn-more {
-    font-size: $normal;
     font-weight: 600;
     color: $black;
     background-color: transparent;
@@ -95,13 +97,10 @@
     border-radius: 4px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 5px 10px;
     transition: border .3s linear;
     &:hover {
       border: 1px solid $black;
-    }
-    @media (min-width: 768px) {
-      font-size: $menu-link;
     }
   }
 }
@@ -265,19 +264,21 @@
           line-height: 63px;
           padding-bottom: 61px;
         }
+        @media (min-width: 992px) {
+          font-size: $find-customer;
+          line-height: 80px;
+          padding-bottom: 61px;
+        }
         span {
           display: block;
         }
       }
       .find-customer-description {
-        font-size: $big-description;
+        font-size: $normal-description;
         padding-bottom: 30px;
         margin: 0 auto;
         @media (min-width: 576px) {
           font-size: $card-headline;
-        }
-        @media (min-width: 768px) {
-          font-size: $fav-customer-description;
         }
       }
       .find-customer-btn {
@@ -348,7 +349,6 @@
       color: $silver;
       @media (min-width: 576px) {
         font-size: $normal-description;
-        line-height: 36px;
       }
       @media (min-width: 768px) {
         font-size: $big-description;
@@ -437,13 +437,14 @@
             font-weight: 700;
             line-height: 24px;
             color: $black;
+            padding-bottom: 10px;
             @media (min-width: 576px) {
               font-size: $normal-description;
               line-height: 25px;
             }
             @media (min-width: 992px) {
-              font-size: $card-headline;
-              line-height: 40px;
+              font-size: $big-description;
+              line-height: 25px;
 
             }
             span {
@@ -524,71 +525,7 @@
       .digital-headline {
         @include headline;
       }
-      .digital-description {
-        font-size: $normal;
-        color: $silver;
-        @media (min-width: 576px) {
-          font-size: $normal-description;
-        }
-      }
     }
-  //********************************************** Digital slider ********************************
-  .sliders {
-    padding-bottom: 50px;
-    .top-slider, .bottom-slider {
-      .slider-item {
-        position: relative;
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: $slider-gradient;
-        }
-        img {
-          width: 100%;
-        }
-        .slide-title {
-          position: absolute;
-          bottom: 11px;
-          left: 25px;
-        }
-        .slide-tag-list {
-          .slide-tag-item {
-            display: inline-block;
-            margin: 5px 0;
-            a {
-              font-size: $inbox-counter;
-              font-weight: 700;
-              color: $white;
-              background-color: rgba(27, 56, 54, 0.8);
-              border-radius: 80px;
-              padding: 5px 8px;
-              transition: all .3s linear;
-              &:hover {
-                color: $black;
-                background-color: $aquamarine;
-              }
-            }
-          }
-        }
-        .slide-title-name {
-          font-size: $normal;
-          font-weight: 700;
-          color: $white;
-          transition: all .3s linear;
-          @media (min-width: 992px) {
-            font-size: $normal-plus;
-          }
-          &:hover {
-            color: $aquamarine;
-          }
-        }
-      }
-    }
-  }
   //********************************************** Discover link *********************************
   .discover-block {
     text-align: center;
@@ -602,17 +539,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
     position: relative;
     @media (min-width: 992px) {
       flex-direction: row;
-      padding-top: 125px;
       align-items: start;
     }
     &:after {
       content: url("../img/digital-bg-element.png");
       position: absolute;
-      top: 60px;
+      top: -67px;
       left: -50px;
     }
   }
@@ -774,7 +709,7 @@
     @media (min-width: 768px) {
       width: 790px;
       margin: 0 auto;
-      font-size: $card-headline;
+      font-size: $big-description;
     }
   }
   .newsletter-form {
@@ -783,10 +718,10 @@
     flex-direction: column;
     align-items: center;
     border-radius: 6px;
-    overflow: hidden;
     margin: 0 auto;
     @media (min-width: 576px) {
       flex-direction: row;
+      overflow: hidden;
     }
     @media (min-width: 768px) {
       width: 75%;
@@ -794,10 +729,13 @@
   }
   .newsletter-input, .newsletter-submit {
     width: 100%;
+    box-sizing: border-box;
     height: 40px;
+    border-radius: 6px;
 
     @media (min-width: 576px) {
       width: auto;
+      border-radius: 0;
     }
     @media (min-width: 768px) {
       height: 64px;
@@ -829,7 +767,7 @@
     border: 1px solid $aquamarine;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     padding: 0 62px;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: all .3s linear;
     @media (min-width: 576px) {
       margin-top: 0;
@@ -887,60 +825,26 @@
 #footer {
   background: $newsletter-gradient;
 
-  .footer-menu {
-    padding: 15px 0;
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 0;
-    }
-    .logo {
-      text-align: center;
-
-      a {
-        font-size: $menu-link;
-        font-weight: 800;
-        text-transform: uppercase;
-        color: $white;
-        @media (min-width: 576px) {
-          font-size: $normal-plus;
-        }
+  .logo {
+    text-align: center;
+    padding-bottom: 20px;
+    a {
+      font-size: $menu-link;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $white;
+      @media (min-width: 576px) {
+        font-size: $normal-plus;
       }
     }
   }
-  .menu-list {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      font-size: $btn-size;
-    }
-  }
-  .footer-menu-item {
-    margin-bottom: 20px;
-    @media (min-width: 768px) {
-      padding-right: 25px;
-      margin-bottom: 0;
-    }
-  }
-  .footer-menu-item:last-child {
-    padding-right: 0;
-  }
-  .footer-menu-link {
-    font-size: $log-in;
-    font-weight: 700;
-    color: $white;
-    transition: all .3s linear;
-    &:hover {
-      color: $aquamarine;
-    }
-  }
+
   .copyright {
     font-size: $lang-item;
     text-align: center;
     color: $white;
+    padding-bottom: 5px;
+
   }
 }
 
