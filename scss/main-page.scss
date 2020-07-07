@@ -707,7 +707,7 @@
       font-size: $normal-description;
     }
     @media (min-width: 768px) {
-      width: 790px;
+      width: 90%;
       margin: 0 auto;
       font-size: $big-description;
     }
@@ -768,6 +768,7 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     padding: 0 62px;
     margin-top: 10px;
+    cursor: pointer;
     transition: all .3s linear;
     @media (min-width: 576px) {
       margin-top: 0;
@@ -799,9 +800,6 @@
     text-transform: none;
     text-align: center;
     color: $white;
-    @media (min-width: 768px) {
-      font-size: $big-description;
-    }
   }
   .contact-description {
     font-size: $normal;
@@ -825,9 +823,21 @@
 #footer {
   background: $newsletter-gradient;
 
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+  }
   .logo {
-    text-align: center;
     padding-bottom: 20px;
+    @media (min-width: 768px) {
+      padding: 0;
+    }
     a {
       font-size: $menu-link;
       font-weight: 800;
@@ -841,10 +851,11 @@
 
   .copyright {
     font-size: $lang-item;
-    text-align: center;
     color: $white;
     padding-bottom: 5px;
-
+    @media (min-width: 768px) {
+      padding: 0;
+    }
   }
 }
 

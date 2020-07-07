@@ -53,7 +53,9 @@ header {
       right: 0;
       padding: 0;
     }
-
+    nav {
+      flex-grow: 1;
+    }
     .menu-list {
       display: flex;
       flex-direction: column;
@@ -62,6 +64,7 @@ header {
       padding-top: 82px;
       @media (min-width: 992px) {
         flex-direction: row;
+        justify-content: center;
         padding-top: 0;
       }
     }
