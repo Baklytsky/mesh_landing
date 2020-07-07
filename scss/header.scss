@@ -104,9 +104,11 @@ header {
       }
       .init-block {
         padding-bottom: 25px;
+        //display: none;
         @media (min-width: 992px) {
           padding-right: 13px;
           padding-bottom: 0;
+          //display: block;
         }
         .log-in {
           font-size: $log-in;

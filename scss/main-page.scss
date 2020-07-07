@@ -16,16 +16,14 @@
 //********************************************** Cookie Alert ********************************
 //***********************************************************************************************
 .cookie-alert {
-  width: 320px;
-  height: 320px;
+  width: 100%;
+  height: auto;
   text-align: center;
   display: none;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  bottom: -90px;
-  right: -40px;
-  border-radius: 50%;
+  bottom: 0;
   background: $aquamarine;
   color: $black;
   padding: 10px 15px 0;
@@ -48,6 +46,8 @@
     width: 380px;
     height: 380px;
     bottom: -100px;
+    right: -40px;
+    border-radius: 50%;
     padding: 45px 15px 0;
   }
   .cookie-headline {
@@ -141,6 +141,27 @@
     }
     .meshwork-word {
       color: $aquamarine;
+    }
+  }
+  .mobile-init-block {
+    padding-top: 25px;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    .register-btn {
+      font-size: $sign-up;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $black;
+      background-color: $aquamarine;
+      border: 1px solid $aquamarine;
+      border-radius: 51px;
+      padding: 11px 9px;
+      cursor: pointer;
+      transition: all .3s linear;
+      &:hover {
+        @include btn-hover;
+      }
     }
   }
 
