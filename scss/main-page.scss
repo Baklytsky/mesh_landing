@@ -172,12 +172,18 @@
   overflow: hidden;
   position: absolute;
   bottom: 0;
-  a {
+  .second-line, .first-line {
     color: $white;
+  }
+  .second-line {
+    display: none;
   }
   @media (min-width: 768px) {
     font-size: $benefits-title;
     padding: 5px 0;
+    .second-line {
+      display: inline-block;
+    }
   }
   @media (min-width: 1200px) {
     font-size: $running-line-size;

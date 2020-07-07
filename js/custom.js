@@ -126,7 +126,7 @@ jQuery(function ($) {
                 pauseOnHover: true
             });
         }
-        if (parseInt($(window).width()) < 768) {
+        if (parseInt($(window).width()) <= 768) {
             $('.marquee').marquee({
                 duration: 5000,
                 duplicated: true,
