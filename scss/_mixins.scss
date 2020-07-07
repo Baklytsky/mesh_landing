@@ -13,8 +13,7 @@
 }
 
 @mixin btn {
-  font-family: Nunito, sans-serif;
-  font-size: $normal;
+  font-size: $lang-item;
   font-weight: 700;
   color: $black;
   background-color: $aquamarine;
