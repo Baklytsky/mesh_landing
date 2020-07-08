@@ -118,17 +118,17 @@ jQuery(function ($) {
         });
         //----------------------------------- jQuery Marquee Running line -------------------------
 
-        if (parseInt($(window).width()) > 768) {
+        if (parseInt($(window).width()) >= 768) {
             $('.marquee').marquee({
-                duration: 8000,
+                duration: 16000,
                 duplicated: true,
                 startVisible: true,
                 pauseOnHover: true
             });
         }
-        if (parseInt($(window).width()) <= 768) {
+        if (parseInt($(window).width()) < 768) {
             $('.marquee').marquee({
-                duration: 5000,
+                duration: 6000,
                 duplicated: true,
                 startVisible: true,
                 pauseOnHover: true
