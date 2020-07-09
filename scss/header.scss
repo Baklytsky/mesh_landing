@@ -26,7 +26,11 @@ header {
   //********************************************** Logo ************************************
   .logo {
     z-index: 5;
-    @include logo;
+    .logo-img {
+      width: 146px;
+      height: 19px;
+      display: block;
+    }
     @media (min-width: 576px) {
       margin-right: 65px;
     }
