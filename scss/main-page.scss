@@ -866,17 +866,13 @@
   }
   .logo {
     padding-bottom: 20px;
+    img {
+      width: 146px;
+      height: 19px;
+      display: block;
+    }
     @media (min-width: 768px) {
       padding: 0;
-    }
-    a {
-      font-size: $menu-link;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: $white;
-      @media (min-width: 576px) {
-        font-size: $normal-plus;
-      }
     }
   }
 
